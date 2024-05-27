@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Game List</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+<h1>Game List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="game : ${games}">
+        <td th:text="${game.id}"></td>
+        <td th:text="${game.title}"></td>
+        <td>
+            <a th:href="@{/games/{id}/edit(id=${game.id})}">Edit</a>
+            <a th:href="@{/games/{id}/delete(id=${game.id})}">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a href="/game-create">Create New Game</a>
+</body>
+</html>

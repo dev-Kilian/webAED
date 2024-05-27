@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+<h1>Bienvenido a la página principal</h1>
+
+<h2>Opciones</h2>
+<ul>
+    <li><a th:href="@{/games}">Ver juegos disponibles</a></li>
+    <li><a th:href="@{/games/create}">Añadir juego</a></li>
+    <li><a th:href="@{/tournaments}">Ver torneos disponibles</a></li>
+    <li><a th:href="@{/tournaments/create}">Crear nuevo torneo</a></li>
+    <li><a th:href="@{/users}">Ver usuarios</a></li>
+    <li><a th:href="@{/users/create}">Crear nuevo usuario</a></li>
+</ul>
+</body>
+</html>

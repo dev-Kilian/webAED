@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tournament Detail</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+<h1>Tournament Detail</h1>
+<div>
+    <p>Title: <span th:text="${tournament.title}"></span></p>
+    <p>Created By: <span th:text="${tournament.createdBy}"></span></p>
+    <p>Game Hosted: <span th:text="${tournament.gameHosted}"></span></p>
+    <p>Created On: <span th:text="${tournament.createdOn}"></span></p>
+</div>
+</body>
+</html>

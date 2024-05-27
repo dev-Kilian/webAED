@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tournament List</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+<h1>Tournament List</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Created By</th>
+        <th>Game Hosted</th>
+        <th>Created On</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="tournament : ${tournaments}">
+        <td th:text="${tournament.title}"></td>
+        <td th:text="${tournament.createdBy}"></td>
+        <td th:text="${tournament.gameHosted}"></td>
+        <td th:text="${tournament.createdOn}"></td>
+        <td>
+            <a th:href="@{/tournaments/{id}/edit(id=${tournament.id})}">Edit</a>
+            <a th:href="@{/tournaments/{id}/delete(id=${tournament.id})}">Delete</a>
+        </td>
+        <td>
+            <a th:href="@{/tournaments/{id}(id=${tournament.id})}">View</a>
+            <a href="/tournament-create">Create New Tournament</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

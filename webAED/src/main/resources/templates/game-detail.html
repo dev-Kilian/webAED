@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Detail</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+<h1>Game Detail</h1>
+<div>
+    <p>Title: <span th:text="${game.title}"></span></p>
+    <p>Logo URL: <span th:text="${game.logoUrl}"></span></p>
+    <p>Content: <span th:text="${game.content}"></span></p>
+</div>
+</body>
+</html>
